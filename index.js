@@ -1,15 +1,14 @@
 const express = require('express');
 
 const app = express()
-const PORT = 3000
-
-app.use(express.json());
+const PORT = 8000
 
 app.get('/', (req, res) => {
-  res.json({
-    date: new Date(),
-    message: 'Hello World 🌍'
-  })
+  res.send('Hello World')
+})
+
+app.get('/about', (req, res) => {
+  res.send('About route 🎉 ')
 })
 
 app.listen(PORT, () => {
